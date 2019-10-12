@@ -193,13 +193,7 @@ else ifeq ($(platform), ps2)
    CXX = ee-g++$(EXE_EXT)
    AR = ee-ar$(EXE_EXT)
    PLATFORM_DEFINES := -DPS2 -DCC_RESAMPLER -DCC_RESAMPLER_NO_HIGHPASS
-   PLATFORM_DEFINES += -Ips2/
-   CFLAGS += -G0
-   CXXFLAGS += -G0
    STATIC_LINKING = 1
-
-   	#PLATFORM_DEFINES := -DPS2 -G0 -DNO_UNALIGNED_ACCESS -fsingle-precision-constant
-	#PLATFORM_DEFINES += -I$(PS2SDK)/ee/include -I$(PS2SDK)/common/include -Ips2/
 
 # PSP
 else ifeq ($(platform), psp1)
